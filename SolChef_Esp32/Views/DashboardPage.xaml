@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:SolChef_Esp32.Models"
+             x:Class="SolChef_Esp32.Views.DashboardPage"
+             xmlns:viewmodels="clr-namespace:SolChef_Esp32.ViewModels"
+             Title="Dashboard">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10" BackgroundColor="#EEE">
+            <!-- Medições ultimas 24 horas -->
+            <Frame HasShadow="True" CornerRadius="10" Padding="5">
+                <VerticalStackLayout Spacing="20" Padding="10">
+                    <Label Text="* Temperatura nas últimas 24 horas" FontAttributes="Bold" FontSize="20" FontFamily="Mono" />
+                    <Frame CornerRadius="20" Padding="20" BackgroundColor="#FDFBD4" HasShadow="True">
+                        <VerticalStackLayout Spacing="20">
+                            <BoxView Color="#CCC" HeightRequest="150" CornerRadius="10" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Leitura Sensores Temperatura -->
+            <Frame HasShadow="True" CornerRadius="10" Padding="5">
+                <VerticalStackLayout Spacing="20" Padding="10">
+                    <Label Text="* Sensores" FontAttributes="Bold" FontSize="20" FontFamily="Mono" />
+                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                        <Frame WidthRequest="170" Padding="20" CornerRadius="15" BackgroundColor="#FDFBD4" HasShadow="True">
+                            <VerticalStackLayout HorizontalOptions="Center">
+                                <Label Text="Sensor Água" FontAttributes="Bold" FontSize="16" FontFamily="Mono" />
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="{x:Static models:Icons.Thermometer}" Style="{x:StaticResource MaterialIcon}" />
+                                    <Label Text="{Binding SensorA_Temp}" FontSize="20" FontAttributes="Italic" TextColor="OrangeRed" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                        <Frame WidthRequest="170" Padding="20" CornerRadius="15" BackgroundColor="#FDFBD4" HasShadow="True">
+                            <VerticalStackLayout HorizontalOptions="Center">
+                                <Label Text="Sensor Forno" FontAttributes="Bold" FontSize="16" FontFamily="Mono" />
+                                <HorizontalStackLayout Spacing="5">
+                                    <Label Text="{x:Static models:Icons.Thermometer}" Style="{x:StaticResource MaterialIcon}" />
+                                    <Label Text="{Binding SensorB_Temp}" FontSize="20" FontAttributes="Italic" TextColor="OrangeRed" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </HorizontalStackLayout>
+                    <Label Text="Last updated: --:--:--" FontAttributes="Italic" FontSize="12" HorizontalTextAlignment="Center" TextColor="#7E7E7E" FontFamily="Mono" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Leitura Sensores Temperatura -->
+            <Frame MinimumHeightRequest="400" HasShadow="True" CornerRadius="10" Padding="5">
+                <VerticalStackLayout Spacing="20" Padding="10">
+                    <Label Text="* Leituras Anteriores" FontAttributes="Bold" FontSize="20" FontFamily="Mono" />
+                    <CollectionView ItemsSource="{Binding History}" HorizontalOptions="CenterAndExpand">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="5" Padding="10" BackgroundColor="#EFEFE9" BorderColor="#DDD" CornerRadius="10" HasShadow="True">
+                                    <HorizontalStackLayout>
+                                        <Label Text="{Binding Timestamp}" FontFamily="Mono" WidthRequest="120" Margin="10,0,0,0" />
+                                    </HorizontalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

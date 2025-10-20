@@ -1,0 +1,31 @@
+﻿  # Binaries and build artifacts
+  bin/
+  obj/
+
+  # Visual Studio files
+  .vs/
+  *.user
+  *.suo
+  *.pdb
+  *.tlog
+  *.log
+
+  # NuGet packages
+  packages/
+
+  # Android specific files
+  *.apk
+  *.aab
+
+  # iOS specific files
+  *.ipa
+
+  # macOS specific files
+  *.app
+
+  # Windows specific files
+  *.msix
+  *.appx
+
+  # Other common exclusions
+  node_modules/
