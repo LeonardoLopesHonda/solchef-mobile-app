@@ -5,16 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:SolChef_Esp32"
     xmlns:views="clr-namespace:SolChef_Esp32.Views"
+    FlyoutBehavior="Flyout"
     Title="SolChef_Esp32">
 
-    <!--
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-    -->
+    <FlyoutItem Title="Dashboard" Icon="dashboard-blk.png">
+        <ShellContent ContentTemplate="{DataTemplate views:DashboardPage}" />
+    </FlyoutItem>
 
-    <ShellContent
-        ContentTemplate="{DataTemplate views:DashboardPage}" />
+    <FlyoutItem Title="Network" Icon="wifi-blk.png">
+        <ShellContent ContentTemplate="{DataTemplate views:NetworkPage}" />
+    </FlyoutItem>
 
+    <FlyoutItem Title="Settings" Icon="settings-blk.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+    </FlyoutItem>
 </Shell>

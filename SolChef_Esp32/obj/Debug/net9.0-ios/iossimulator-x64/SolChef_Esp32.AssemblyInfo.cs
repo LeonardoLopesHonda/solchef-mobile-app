@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SolChef_Esp32")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+713e1af422c1fca60a6d0f5696355a7b36cbd1ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7dbbbd2cf20b2cfbeb8dda87058e67deb6a181f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SolChef_Esp32")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SolChef_Esp32")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

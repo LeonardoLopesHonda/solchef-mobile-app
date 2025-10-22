@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
              xmlns:models="clr-namespace:SolChef_Esp32.Models"
-             x:Class="SolChef_Esp32.Views.DashboardPage"
              xmlns:viewmodels="clr-namespace:SolChef_Esp32.ViewModels"
+             x:Class="SolChef_Esp32.Views.DashboardPage"
              Title="Dashboard">
     <ScrollView>
         <VerticalStackLayout Padding="10" Spacing="10" BackgroundColor="#EEE">
@@ -11,11 +12,10 @@
             <Frame HasShadow="True" CornerRadius="10" Padding="5">
                 <VerticalStackLayout Spacing="20" Padding="10">
                     <Label Text="* Temperatura nas últimas 24 horas" FontAttributes="Bold" FontSize="20" FontFamily="Mono" />
-                    <Frame CornerRadius="20" Padding="20" BackgroundColor="#FDFBD4" HasShadow="True">
-                        <VerticalStackLayout Spacing="20">
-                            <BoxView Color="#CCC" HeightRequest="150" CornerRadius="10" />
-                        </VerticalStackLayout>
-                    </Frame>
+                    <microcharts:ChartView
+                        HeightRequest="300"
+                        WidthRequest="450"
+                        Chart="{Binding Chart}" />
                 </VerticalStackLayout>
             </Frame>
 

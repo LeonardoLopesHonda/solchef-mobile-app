@@ -53,3 +53,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SolChef_Esp32.Views.DashboardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DashboardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DashboardPage.xaml
+
+[C:/Users/Honda/source/repos/SolChef_Esp32/SolChef_Esp32/Views/NetworkPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SolChef_Esp32.Views.NetworkPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NetworkPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NetworkPage.xaml
+
+[C:/Users/Honda/source/repos/SolChef_Esp32/SolChef_Esp32/Views/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SolChef_Esp32.Views.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SettingsPage.xaml
